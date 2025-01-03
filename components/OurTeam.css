@@ -1,0 +1,18 @@
+.scroll-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll-content {
+  animation: scrollAnimation var(--animation-duration) linear infinite;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-1 * var(--scroll-height) / 2));
+  }
+}
+

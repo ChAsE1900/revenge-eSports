@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  position: relative;
+  width: 100%;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Glowing effect for headings */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Neon border effect for buttons */
+button, .button {
+  border-radius: 9999px; /* This makes all buttons fully rounded */
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  transition: all 0.3s ease;
+}
+
+button:hover, .button:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+}
+
+/* Improved mobile padding */
+@media (max-width: 640px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Gradient background for alternating sections */
+section:nth-child(even) {
+  background: linear-gradient(135deg, #4c1d95, #1e1b4b);
+}
+
+/* Particle effect for the background */
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
